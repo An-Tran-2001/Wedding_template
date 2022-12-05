@@ -1,14 +1,14 @@
-// document.getElementById('head-video').load();
-// document.getElementById('head-video').muted = true;
-// document.getElementById('head-video').playsinline = true;
-// document.getElementById('head-video').autoplay = true;
-// document.getElementById('head-video').play();
-// document.getElementById('head-video').loop = true;
+document.getElementById('head-video').load();
+document.getElementById('head-video').muted = true;
+document.getElementById('head-video').playsinline = true;
+document.getElementById('head-video').autoplay = true;
+document.getElementById('head-video').play();
+document.getElementById('head-video').loop = true;
 
-// document.body.onload = function() {
-//     document.getElementById('load-layer').style.display = 'none';
-//     document.getElementById('final-load').style.display = 'block';
-// }
+document.body.onload = function () {
+    document.getElementById('load-layer').style.display = 'none';
+    document.getElementById('final-load').style.display = 'block';
+}
 document.addEventListener('mousemove', function (e) {
     let body = document.querySelector('body');
     let heart = document.createElement('span');
@@ -29,8 +29,8 @@ document.addEventListener('mousemove', function (e) {
         heart.remove();
     }, 1000);
 });
-function heart(e) {
-}
+
+function heart(e) {}
 
 window.requestAnimationFrame =
     window.__requestAnimationFrame ||
@@ -197,3 +197,24 @@ document.querySelector('.mail-love').addEventListener('click', function () {
     document.querySelector('.thead').style.display = 'flex';
     document.querySelector('.mail-love').style.display = 'none';
 });
+
+
+
+this.soundFile = document.createElement("audio");
+
+this.soundFile.src = "assets/ytmp3free.cc_way-back-home-shaun-featconor-maynard-sam-feldt-remix-nhac-nen-gay-nghien-hot-trend-2022-youtubemp3free.org.mp3";
+this.soundFile.type = "audio/mpeg";
+this.soundFile.controls = "";
+this.soundFile.style.display = "none";
+document.body.appendChild(this.soundFile);
+this.soundFile.load();
+this.soundFile.loop = true;
+document.body.addEventListener('click', function () {
+    this.soundFile.play();
+}.bind(this));
+document.body.addEventListener('touchstart', function () {
+    this.soundFile.play();
+}.bind(this));
+document.body.addEventListener('mouseover', function () {
+    this.soundFile.play();
+}.bind(this));
