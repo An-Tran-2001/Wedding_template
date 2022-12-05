@@ -1246,7 +1246,74 @@ span::before {
 }
 
 /*  */
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1318px) {
+    .slogan-normal>h1{
+        font-size: 2.5rem;
+    }
+    .slogan-normal>p{
+        font-size: 1rem;
+    }
+    .history-normal{
+        padding: 3% 5%;
+    }
+    .his-img{
+        height: 70%;
+        margin-top: 40%;
+    }
+    .slogan{
+        max-width: 60%;
+    }
+    .slogan>h1{
+        font-size: 2rem ;
+        margin-bottom: .5rem;
+    }
+    .slogan>h3{
+        font-size: 1.8rem;
+    }
+    .date>h3{
+        font-size: 1.3rem;
+        padding: 0.3rem 0;
+    }
+    .date>h2{
+        font-size:2rem;
+    }
+    .img-ngoc{
+        width: 17.5%;
+        left: 85%;
+    }
+    .img-thao{
+        width: 17.5%;
+        left: 15%;
+    }
+    .img-ngoc>h2{
+        font-size: 1.2rem;
+    }
+    .img-thao>h2{
+        font-size: 1rem;
+    }
+    .messenger>i{
+        font-size: 2rem;
+    }
+    .demo-video-messenger>i{
+        font-size: 2rem;
+    }
+    @keyframes animate-heart-text{
+        0%{
+            transform: scale(1);
+            color: #ff0090;
+        }
+        50%{
+            transform: scale(1.2);
+            color: rgb(247, 77, 133);
+        }
+        100%{
+            transform: scale(1);
+            color: #ff0090;
+        }
+    }
+}
+
+@media screen and (max-width: 880px) {
     .border-thead {
         display: none;
     }
@@ -1348,6 +1415,7 @@ span::before {
 
     .history-normal {
         grid-template-columns: repeat(1, 1fr);
+        width: 100%;
     }
 
     .his-intro {
@@ -1461,7 +1529,6 @@ span::before {
         }
     }
 }
-
 @media screen and (max-width: 395px) {
     .slogan-normal>h1 {
         font-size: 1.95rem;
