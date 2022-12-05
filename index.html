@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="heart.css">
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     />
+	<link rel="stylesheet" href="heart.css">
     <link rel='shortcut icon' href='assets/logo.png'>
     <title>Thiệp Mời Dự Đám Cưới Phương Thảo Và Xuân Ngọc</title>
 </head>
 
 <body>
-    <div id="final-load" style="display: none">
+    <div id="final-load">
         <div class="mail-love">
             <i class="fa-solid fa-envelope-open-text"></i>
         </div>
@@ -53,12 +53,12 @@
                 <i class="fa-regular fa-envelope"></i>
             </div>
             <div class="tbody">
-                <h1> TRÂN TRỌNG KÍNH MỜI BẠN ĐẾN ĐÁM CƯỚI CỦA CHÚNG TÔI
+                <h1> HAPPY WEDDING
                     <i class="fa-solid fa-xmark" id="close-mess"></i>
                 </h1>
                 <h2> Một chút kỷ niệm 9 năm của chúng tớ</h2>
                 <div class="demo-video-messenger">
-                    <video muted playsinline autoplay loop>
+                    <video id="head-video" muted playsinline autoplay loop>
                         <source src="assets/Demo-video.mp4" type="video/mp4">
                     </video>
                     <i class="fa-solid fa-heart-pulse"></i>
@@ -69,7 +69,7 @@
         </div>
         <div class="tbody-normal">
             <div class="thead-normal">
-                <video id="head-video" load muted playsinline autoplay loop>
+                <video muted playsinline autoplay loop>
                     <source src="assets/head-video.mp4" type="video/mp4">
                 </video>
                 <div class="slogan-normal">
@@ -105,7 +105,7 @@
                     <p>- 21/12/2013: Chẳng cần tỏ tình sến súa, trên chiếc xe đạp khám phá Hà Nội từ Ngã Tư Sở về tận Mỹ Đình. Chuyện tình của chúng mình bắt đầu từ đây.</p>
                     <p>- 2014/2017: Quãng đời sinh viên trôi qua thật yên bình, chuyện tình chúng mình cũng vậy, ít cãi vã, ít dỗi hờn đầy nhiệt huyết và thật xinh tươi.</p>
                     <p>- 2018/2019: Cuộc sống bắt đầu những điều mới, em đi làm, anh đi học chuẩn bị một hành trang trên đất nước mới. Và thế là chúng mình yêu xa.</p>
-                    <p>- 1/2020: Lân đầu tiên anh đặt chân đến Nhật Bản, mọi  vui buồn, thử thách chỉ qua chiếc điện thoại nhỏ xinh.</p>
+                    <p>- 1/2020: Lần đầu tiên anh đặt chân đến Nhật Bản, mọi  vui buồn, thử thách chỉ qua chiếc điện thoại nhỏ xinh.</p>
                     <p>- 8/2022: Rõ dặn "Ngày mai nắng lên anh sẽ về" ấy thế mà lại xuất hiện đúng ngày mưa dông. Chả thể tưởng tượng có người lại dùng món sườn chua ngọt để Cầu Hôn.   </p>
                     <p>- 12/2022: Chàng trai năm 18 tuổi cuối cùng cũng lấy được vợ rồi.</p>
                 </div>
@@ -171,8 +171,8 @@
         </div>
     </div>
     <script src="heart.js"></script>
-    <div id="load-layer" style="display: none;position: fixed;">
-        <iframe src="https://giphy.com/embed/YMM6g7x45coCKdrDoj" width="480" height="480" frameBorder="0"></iframe>
+	<div id="load-layer" style="position: fixed;">
+        <div class="load-gif"></div>
     </div>
 </body>
 <footer>

@@ -1,18 +1,14 @@
-window.location.hash.replace('#', '');
+// document.getElementById('head-video').load();
+// document.getElementById('head-video').muted = true;
+// document.getElementById('head-video').playsinline = true;
+// document.getElementById('head-video').autoplay = true;
+// document.getElementById('head-video').play();
+// document.getElementById('head-video').loop = true;
 
-
-
-document.getElementById('head-video').load();
-document.getElementById('head-video').muted = true;
-document.getElementById('head-video').playsinline = true;
-document.getElementById('head-video').autoplay = true;
-document.getElementById('head-video').play();
-document.getElementById('head-video').loop = true;
-
-document.body.onload = function() {
-    document.getElementById('load-layer').style.display = 'none';
-    document.getElementById('final-load').style.display = 'block';
-}
+// document.body.onload = function() {
+//     document.getElementById('load-layer').style.display = 'none';
+//     document.getElementById('final-load').style.display = 'block';
+// }
 document.addEventListener('mousemove', function (e) {
     let body = document.querySelector('body');
     let heart = document.createElement('span');

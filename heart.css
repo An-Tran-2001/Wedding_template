@@ -60,6 +60,53 @@ body{
     justify-content: center;
     align-items: center;
 }
+.load-gif{
+    max-width: 50%;
+    max-height: 25%;
+    width: 600px;
+    height: 400px;
+    animation: load 1s infinite ;
+    background-repeat: no-repeat;
+    background-size: ̀600px 300px;
+    background-position: center;
+}
+@keyframes load{
+    7.5%{
+        background: url("assets/loading.png/gif_1.png") no-repeat ;
+    }
+    15%{
+        background: url("assets/loading.png/gif_2.png") no-repeat ;
+    }
+    22.5%{
+        background: url("assets/loading.png/gif_3.png") no-repeat ;
+    }
+    30%{
+        background: url("assets/loading.png/gif_4.png") no-repeat ;
+    }
+    37.5%{
+        background: url("assets/loading.png/gif_5.png") no-repeat ;
+    }
+    45%{
+        background: url("assets/loading.png/gif_6.png") no-repeat ;
+    }
+    52.5%{
+        background: url("assets/loading.png/gif_7.png") no-repeat ;
+    }60%{
+        background: url("assets/loading.png/gif_8.png") no-repeat ;
+    }67.5%{
+        background: url("assets/loading.png/gif_9.png") no-repeat ;
+    }75%{
+        background: url("assets/loading.png/gif_10.png") no-repeat ;
+    }82.5%{
+        background: url("assets/loading.png/gif_11.png") no-repeat ;
+    }
+    90%{
+        background: url("assets/loading.png/gif_12.png") no-repeat ;
+    }
+    100%{
+        background: url("assets/loading.png/gif_13.png") no-repeat ;
+    }
+}
 #final-load{
     display: none;
 }
