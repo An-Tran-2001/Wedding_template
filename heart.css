@@ -45,15 +45,41 @@ width: 0px;
 
 
 body{
-    min-height: 100vh;
+    /* display: none; */
+    width: 100%;
+    min-height: 100%;
     /* background: #000; */
     overflow-x: hidden;
-    background: rgba(195, 158, 160, 1);
+    box-sizing: border-box;
     /* position: relative; */
 }
-audio{
-    opacity: 0;
+#load-layer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#final-load{
+    display: none;
+}
+#load-layer>iframe{
+    min-width: 100%;
+    max-width: 50%;
+}
+body::after{
+    content: "";
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("assets/3d6898b216aacff496bb.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.5;
 }
 .mail-love{
     width: 100px;
@@ -139,6 +165,7 @@ audio{
     animation: slogan 2s ease-in-out forwards;
     animation-delay: 2s;
     opacity: 0;
+    max-width: 70%;
 }
 @keyframes slogan{
     0%{
@@ -202,8 +229,8 @@ canvas {
     align-items: center;
     flex-direction: column;
     position: absolute;
-    width: 250px;
-    height: 0;
+    width: 14%;
+    max-height: 50%;
     top: 50%;
     left: 20%;
     transform: translate(-50%, -50%);
@@ -240,8 +267,8 @@ canvas {
     align-items: center;
     flex-direction: column;
     position: absolute;
-    width: 250px;
-    height: 500px;
+    width: 14%;
+    max-height: 50%;
     top: 50%;
     left: 80%;
     transform: translate(-50%, -50%);
@@ -533,37 +560,35 @@ span::before{
     display: flex;
     flex-direction: row;
     padding: 2rem 0;
-    margin: 2rem;
     position: relative;
 }
 .demo-video-messenger>video{
-    width: 50%;
+    width: 41%;
 }
 .demo-video-messenger>.demo-mess{
-    width: 50%;
-    background: url('assets/wedding-img.png');
+    width: 41%;
+    background: url('assets/wedding-img.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
 }
-.demo-video-messenger>h2{
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.tbody>h2{
+    text-align: center;
     font-weight: 200;
     font-size: 2rem;
     line-height: 1.2;
     letter-spacing: 0.25rem;
+    padding:.5rem;
 }
 .demo-video-messenger>i{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-size: 10rem;
     cursor: pointer;
     animation: animate-heart-text 0.5s infinite ease-in-out;
+    width: 18%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 .demo-video-messenger>i:hover{
     color: #ec017b;
@@ -596,7 +621,7 @@ span::before{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('assets/wedding\ \(4\).jpg');
+    background: url('assets/wedding_4.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -727,15 +752,15 @@ span::before{
     margin: 1rem 0;
 }
 .history-normal{
-    width: 80%;
+    padding: 3% 10%;
     margin: 0 auto;
     display: grid;
     justify-items: center;
     justify-content: center;
     align-content: center;
     grid-template-columns: repeat(3, 1fr);
-    padding: 2rem 0;
     box-sizing: border-box;
+    background: rgb(195 158 160);
 }
 .his-intro{
     display: flex;
@@ -778,31 +803,27 @@ span::before{
 .his-img{
     max-width: 400px;
     width: 100%;
-    height: 75%;
-    padding: 1rem;
-    overflow: hidden;
+    height: 80%;
     background: url('assets/7baa5319d5010c5f551022.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin-top: 65%;
-    z-index: 3;   
+    margin-top: 20%;
+    box-shadow: 10px 10px rgba(250, 37, 94, 0.5);
 }
 .time-date{
     width: 100%;
     min-height: 50vh;
     max-height: 650px;
-    background: url("assets/3d6898b216aacff496bb.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-blend-mode: multiply;
-    position: relative; 
+    position: relative;
+    overflow: scroll;
+}
+.time-date::-webkit-scrollbar{
+    display: none;
 }
 .time-date::before{
     content: "";
@@ -844,6 +865,8 @@ span::before{
     align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
+    background: rgb(195 158 160);
+    z-index: 0;
 }
 .invitation{
     min-width: 900px;
@@ -899,6 +922,7 @@ span::before{
     text-align: left;
     padding: 1rem;
     font-style: inherit;
+    z-index: 1;
 }
 .item-iv>p{
     font-family: 'Lobster', serif;
@@ -911,6 +935,7 @@ span::before{
     padding: 0.5rem;
     margin: 0rem 0;
     font-style: italic;
+    z-index: 1;
 }
 .item-iv:nth-child(2)::after{
     content: "";
@@ -1112,6 +1137,10 @@ span::before{
     .tbody{
         display: none;
     }
+    .slogan-normal{
+        width: 100%;
+        height: 100%;
+    }
     .slogan-normal>img{
         max-width: 239px;
         margin: 3rem 0;
@@ -1128,6 +1157,14 @@ span::before{
     }
     .date-normal{
         font-size: 10px;
+        width: 90%;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .date-normal>h2{
+        margin: 0;
+        max-width: 6rem;
     }
     .date-normal>h1{
         font-size: 4rem;
@@ -1175,6 +1212,7 @@ span::before{
         flex-wrap: nowrap;
         flex-direction: column;
         min-width:99%;
+        margin : 2.5rem 0;
     }
     .item-iv{
         width: 100%;
@@ -1228,13 +1266,13 @@ span::before{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: url("assets/wedding-img.png");
+        background: url("assets/wedding-img.jpg");
         animation: wedding-invitations-mobile 1s ease-in-out forwards;
         z-index: 1;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        animation-delay: 2s;
+        animation-delay: 3s;
         opacity: 0;
     }
     @keyframes wedding-invitations-mobile{
@@ -1246,5 +1284,18 @@ span::before{
             transform: translate(-50%, -50%) scale(1);
             opacity: 1;
         }
+    }
+}
+@media screen and (max-width: 395px) {
+    .slogan-normal>h1{
+        font-size: 1.95rem;
+    }
+}
+@media screen and (max-height: 825px) {
+    .location-ngoc>p{
+        display: none;
+    }
+    .location-thao>p{
+        display: none;
     }
 }

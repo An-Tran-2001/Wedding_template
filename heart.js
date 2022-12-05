@@ -1,3 +1,18 @@
+window.location.hash.replace('#', '');
+
+
+
+document.getElementById('head-video').load();
+document.getElementById('head-video').muted = true;
+document.getElementById('head-video').playsinline = true;
+document.getElementById('head-video').autoplay = true;
+document.getElementById('head-video').play();
+document.getElementById('head-video').loop = true;
+
+document.body.onload = function() {
+    document.getElementById('load-layer').style.display = 'none';
+    document.getElementById('final-load').style.display = 'block';
+}
 document.addEventListener('mousemove', function (e) {
     let body = document.querySelector('body');
     let heart = document.createElement('span');
@@ -40,7 +55,9 @@ window.requestAnimationFrame =
             element.__lastTime = currTime + timeToCall;
         };
     })();
-window.isDevice = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(((navigator.userAgent || navigator.vendor || window.opera)).toLowerCase()));
+// window.isDevice = (/android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(((navigator.userAgent || navigator.vendor || window.opera)).toLowerCase())); 
+// window.isDevice = (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+window.isDevice = false;
 var loaded = false;
 var init = function () {
     if (loaded) return;
@@ -182,4 +199,5 @@ document.getElementById('close-mess').addEventListener('click', function () {
 document.querySelector('.mail-love').addEventListener('click', function () {
     document.querySelector('.tbody-normal').style.display = 'none';
     document.querySelector('.thead').style.display = 'flex';
+    document.querySelector('.mail-love').style.display = 'none';
 });
